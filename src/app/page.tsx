@@ -1,28 +1,30 @@
 "use client"
 import Head from "next/head";
 import {
-  AiFillTwitterCircle,
   AiFillLinkedin,
-  AiFillYoutube,
+  AiFillGithub,
+  AiFillInstagram,
 } from "react-icons/ai";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { useState } from "react";
 import Image from "next/image";
 
 // Images
-import deved from "../../../public/dev-ed-wave.png";
-import code from "../../../public/code.png";
-import design from "../../../public/design.png";
-import consulting from "../../../public/consulting.png";
-import web1 from "../../../public/web1.png";
-import web2 from "../../../public/web2.png";
-import web3 from "../../../public/web3.png";
-import web5 from "../../../public/web5.png";
-import web4 from "../../../public/web4.png";
-import web6 from "../../../public/web6.png";
+import imageProfile from "../../public/perfilWpp.png";
+import deved from "../../public/dev-ed-wave.png";
+import code from "../../public/code.png";
+import design from "../../public/design.png";
+import consulting from "../../public/consulting.png";
+import web1 from "../../public/web1.png";
+import web2 from "../../public/web2.png";
+import web3 from "../../public/web3.png";
+import web5 from "../../public/web5.png";
+import web4 from "../../public/web4.png";
+import web6 from "../../public/web6.png";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
+  const [imageAlternate, setImageAlternate] = useState(false);
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -60,39 +62,46 @@ export default function Home() {
               Developer
             </h3>
             <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
-              Freelancer providing services for programming and design content
-              needs. Join me down below and s get cracking!
+              Desenvolvedor Fullstack com foco em frontEnd usando NextJs. Conheça um pouco mais sobre mim, sobre os meus trabalhos e habilidades
             </p>
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
-              <AiFillTwitterCircle />
+              <AiFillGithub />
               <AiFillLinkedin />
-              <AiFillYoutube />
+              <AiFillInstagram />
             </div>
-            <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
-              <Image
+            <div onClick={()=>setImageAlternate(!imageAlternate)} className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
+              
+              {imageAlternate ? (
+                <Image
+                src={imageProfile}
+                layout="fill"
+                objectFit="cover"
+                alt="Imagem real"
+                />
+              ) : (
+                <Image
                 src={deved}
                 layout="fill"
                 objectFit="cover"
-                alt="alguma coisa"
-              />
+                alt="avatar cartoon"
+                />
+              )}
+              
             </div>
           </div>
         </section>
         <section>
           <div>
-            <h3 className="text-3xl py-1 dark:text-white ">Services I offer</h3>
+            <h3 className="text-3xl py-1 dark:text-white ">O inicio</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              Since the beginning of my journey as a freelance designer and
-              developer, ve done remote work for
-              <span className="text-teal-500"> agencies </span>
-              consulted for <span className="text-teal-500">startups </span>
-              and collaborated with talanted people to create digital products
-              for both business and consumer use.
+              Comecei no mercado de Tecnologia em 2021 como <span className="text-teal-500"> estagiário</span>, quando conheci o mundo 
+              <span className="text-teal-500"> Dev </span>. Me identifiquei e comecei a estudar programação mobile e desenvolver meus primeiros Apps (ou tentar rs)
+              Pouco tempo depois passei a aprender um pouco sobre a web e desvendar os mistérios do,<span className="text-red-500"> HTML</span>, <span className="text-blue-700">Css</span>, <span className="text-yellow-400">Javascript</span>, rotas, requisições...
+              2 anos se passaram e continuo como antes <span className="text-teal-500">aprendendo</span>, mas agora empolgado pelo Next 13, cauteloso com a segurança da aplicação( autenticações )
+              e principalmente entendendo um pouco mais sobre design patterns.
+
             </p>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              I offer from a wide range of services, including brand design,
-              programming and teaching.
-            </p>
+           
           </div>
           <div className="lg:flex gap-10">
             <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
@@ -103,17 +112,16 @@ export default function Home() {
                 alt="alguma coisa"
               />
               <h3 className="text-lg font-medium pt-8 pb-2  ">
-                Beautiful Designs
+                Frontend
               </h3>
               <p className="py-2">
-                Creating elegant designs suited for your needs following core
-                design theory.
+                Desenvolvimento de interfaces bonitas, funcionais e intuitivas prezando pela beleza do código
               </p>
-              <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Illustrator</p>
-              <p className="text-gray-800 py-1">Figma</p>
-              <p className="text-gray-800 py-1">Indesign</p>
+              <h4 className="py-4 text-teal-600">Ferramentas:</h4>
+              <p className="text-gray-800 py-1">NextJs</p>
+              <p className="text-gray-800 py-1">React</p>
+              <p className="text-gray-800 py-1">Styled Components</p>
+              <p className="text-gray-800 py-1">TailwindCss</p>
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
               <Image
@@ -123,17 +131,17 @@ export default function Home() {
                 alt="alguma coisa"
               />
               <h3 className="text-lg font-medium pt-8 pb-2 ">
-                Code your dream project
+                Backend
               </h3>
               <p className="py-2">
-                Do you have an idea for your next great website? vamos make it a
-                reality.
+                Construção de rotas e ambientes seguros, bem como a entrega dos dados da forma correta com a melhor arquitetura possivel
               </p>
-              <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Illustrator</p>
-              <p className="text-gray-800 py-1">Figma</p>
-              <p className="text-gray-800 py-1">Indesign</p>
+              <h4 className="py-4 text-teal-600">Ferramentas</h4>
+              <p className="text-gray-800 py-1">Express</p>
+              <p className="text-gray-800 py-1">Javascript</p>
+              <p className="text-gray-800 py-1">Construção de API</p>
+              <p className="text-gray-800 py-1">Autenticações</p>
+              <p className="text-gray-800 py-1">Requisições semânticas</p>
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
               <Image
@@ -142,16 +150,15 @@ export default function Home() {
                 height={100}
                 alt="alguma coisa"
               />
-              <h3 className="text-lg font-medium pt-8 pb-2 ">Consulting</h3>
+              <h3 className="text-lg font-medium pt-8 pb-2 ">Mobile</h3>
               <p className="py-2">
-                Are you interested in feedback for your current project? I can
-                give you tips and tricks to level it up.
+                Desenvolvimento responsivo pensando nos diferentes tamanhos de dispositivos assim como na melhor experiência para o usuário
               </p>
-              <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Illustrator</p>
-              <p className="text-gray-800 py-1">Figma</p>
-              <p className="text-gray-800 py-1">Indesign</p>
+              <h4 className="py-4 text-teal-600">Ferramentas:</h4>
+              <p className="text-gray-800 py-1">React Native</p>
+              <p className="text-gray-800 py-1">Consumo de API</p>
+              <p className="text-gray-800 py-1">Expo</p>
+              <p className="text-gray-800 py-1">Styled Components</p>
             </div>
           </div>
         </section>
@@ -159,16 +166,7 @@ export default function Home() {
           <div>
             <h3 className="text-3xl py-1 dark:text-white ">Portofolio</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              Since the beginning of my journey as a freelance designer and
-              developer, ve done remote work for
-              <span className="text-teal-500"> agencies </span>
-              consulted for <span className="text-teal-500">startups </span>
-              and collaborated with talanted people to create digital products
-              for both business and consumer use.
-            </p>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              I offer from a wide range of services, including brand design,
-              programming and teaching.
+              Desde 2021 desenvolvo alguns projetos seja para web ou mobile além de colaborar com softwares e projetos empresariais
             </p>
           </div>
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
