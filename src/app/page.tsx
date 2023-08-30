@@ -24,12 +24,11 @@ import web6 from "../../public/web6.png";
 import Navbar from "@/components/Navbar";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
   const [imageAlternate, setImageAlternate] = useState(false);
 
   return (
-    <div className={darkMode ? "dark" : "light"}>
-      <main className=" bg-white px-10 dark:bg-gray-900 md:px-20 lg:px-40">
+    <div>
+      <main className=" light:bg-white px-10 dark:bg-gray-900 md:px-20 lg:px-40">
         <section className="min-h-screen">
           
           <div className="text-center p-10 py-10">
@@ -39,13 +38,13 @@ export default function Home() {
             <h3 className="text-2xl py-2 dark:text-white md:text-3xl">
               Developer
             </h3>
-            <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
+            <p className="light:text-white text-md py-5 leading-8 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
               Desenvolvedor Fullstack com foco em Frontend usando NextJs. Conheça um pouco mais sobre mim, sobre os meus trabalhos e habilidades
             </p>
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
-              <a href="https://github.com/rafael3007" target="_blank" ><AiFillGithub  /></a> 
-              <a href="https://www.linkedin.com/in/rafael-brito-sampaio-88ab05196/" target="_blank"><AiFillLinkedin /></a>
-              <a href="https://www.instagram.com/rafaa_brt7/" target="_blank"><AiFillInstagram /></a>
+              <a href="https://github.com/rafael3007" target="_blank" ><AiFillGithub className="text-white dark:text-black" /></a> 
+              <a href="https://www.linkedin.com/in/rafael-brito-sampaio-88ab05196/" target="_blank"><AiFillLinkedin className="text-white dark:text-black" /></a>
+              <a href="https://www.instagram.com/rafaa_brt7/" target="_blank"><AiFillInstagram className="text-white dark:text-black"  /></a>
             </div>
             <div onClick={()=>setImageAlternate(!imageAlternate)} className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
               
@@ -71,7 +70,7 @@ export default function Home() {
         <section>
           <div>
             <h3 className="text-3xl py-1 dark:text-white ">O inicio</h3>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
+            <p className=" light:text-white text-md py-2 leading-8  dark:text-gray-200">
               Comecei no mercado de Tecnologia em 2021 como <span className="text-teal-500"> estagiário</span>, quando conheci o mundo 
               <span className="text-teal-500"> Dev </span>. Me identifiquei e comecei a estudar programação mobile e desenvolver meus primeiros Apps (ou tentar rs)
               Pouco tempo depois passei a aprender um pouco sobre a web e desvendar os mistérios do,<span className="text-red-500"> HTML</span>, <span className="text-blue-700">Css</span>, <span className="text-yellow-400">Javascript</span>, rotas, requisições...
@@ -82,72 +81,74 @@ export default function Home() {
            
           </div>
           <div className="lg:flex gap-10">
-            <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
+            {/**component stack */}
+            <div className="bg-slate-100 text-center shadow-xl p-10 rounded-xl my-10  dark:bg-white flex-1">
               <Image
                 src={design}
                 width={100}
                 height={100}
                 alt="alguma coisa"
               />
-              <h3 className="text-lg font-medium pt-8 pb-2  ">
+              <h3 className="text-black dark:text-white text-lg font-medium pt-8 pb-2  ">
                 Frontend
               </h3>
-              <p className="py-2">
+              <p className="text-py-2 text-black dark:text-white">
                 Desenvolvimento de interfaces bonitas, funcionais e intuitivas prezando pela beleza do código
               </p>
-              <h4 className="py-4 text-teal-600">Ferramentas:</h4>
-              <p className="text-gray-800 py-1">NextJs</p>
-              <p className="text-gray-800 py-1">React</p>
-              <p className="text-gray-800 py-1">Styled Components</p>
-              <p className="text-gray-800 py-1">TailwindCss</p>
+              <h4 className="py-4 text-teal-600 font-extrabold">Ferramentas:</h4>
+              <p className="text-teal-600 py-1">NextJs</p>
+              <p className="text-teal-600 py-1">React</p>
+              <p className="text-teal-600 py-1">Styled Components</p>
+              <p className="text-teal-600 py-1">TailwindCss</p>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+            <div className="bg-slate-100 text-center shadow-xl p-10 rounded-xl my-10 dark:bg-white flex-1">
               <Image
                 src={code}
                 width={100}
                 height={100}
                 alt="alguma coisa"
               />
-              <h3 className="text-lg font-medium pt-8 pb-2 ">
+              <h3 className="text-black dark:text-white text-lg font-medium pt-8 pb-2 ">
                 Backend
               </h3>
-              <p className="py-2">
+              <p className="py-2 text-black dark:text-white">
                 Construção de rotas e ambientes seguros, bem como a entrega dos dados da forma correta com a melhor arquitetura possivel
               </p>
-              <h4 className="py-4 text-teal-600">Ferramentas</h4>
-              <p className="text-gray-800 py-1">Express</p>
-              <p className="text-gray-800 py-1">Javascript</p>
-              <p className="text-gray-800 py-1">Construção de API</p>
-              <p className="text-gray-800 py-1">Autenticações</p>
-              <p className="text-gray-800 py-1">Requisições semânticas</p>
+              <h4 className="py-4 text-teal-600 font-extrabold">Ferramentas</h4>
+              <p className="text-teal-600 py-1">Express</p>
+              <p className="text-teal-600 py-1">Javascript</p>
+              <p className="text-teal-600 py-1">Construção de API</p>
+              <p className="text-teal-600 py-1">Autenticações</p>
+              <p className="text-teal-600 py-1">Requisições semânticas</p>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+            <div className="bg-slate-100 text-center shadow-xl p-10 rounded-xl my-10 dark:bg-white flex-1">
               <Image
                 src={consulting}
                 width={100}
                 height={100}
                 alt="alguma coisa"
               />
-              <h3 className="text-lg font-medium pt-8 pb-2 ">Mobile</h3>
-              <p className="py-2">
+              <h3 className="text-black dark:text-white text-lg font-medium pt-8 pb-2 ">Mobile</h3>
+              <p className="py-2 text-black dark:text-white">
                 Desenvolvimento responsivo pensando nos diferentes tamanhos de dispositivos assim como na melhor experiência para o usuário
               </p>
-              <h4 className="py-4 text-teal-600">Ferramentas:</h4>
-              <p className="text-gray-800 py-1">React Native</p>
-              <p className="text-gray-800 py-1">Consumo de API</p>
-              <p className="text-gray-800 py-1">Expo</p>
-              <p className="text-gray-800 py-1">Styled Components</p>
+              <h4 className="py-4 text-teal-600 font-extrabold">Ferramentas:</h4>
+              <p className="text-teal-600 py-1">React Native</p>
+              <p className="text-teal-600 py-1">Consumo de API</p>
+              <p className="text-teal-600 py-1">Expo</p>
+              <p className="text-teal-600 py-1">Styled Components</p>
             </div>
           </div>
         </section>
         <section className="py-10">
           <div>
             <h3 className="text-3xl py-1 dark:text-white ">Portofolio</h3>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
+            <p className="text-white text-md py-2 leading-8 dark:text-gray-200">
               Desde 2021 desenvolvo alguns projetos seja para web ou mobile além de colaborar com softwares e projetos empresariais
             </p>
           </div>
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
+            {/**component projects */}
             <div className="basis-1/3 flex-1 ">
               <Image
                 className="rounded-lg object-cover"
