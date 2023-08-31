@@ -22,6 +22,7 @@ import web5 from "../../public/web5.png";
 import web4 from "../../public/web4.png";
 import web6 from "../../public/web6.png";
 import Navbar from "@/components/Navbar";
+import StackComponent from "@/components/stacks/StackComponent";
 
 export default function Home() {
   const [imageAlternate, setImageAlternate] = useState(false);
@@ -81,26 +82,8 @@ export default function Home() {
            
           </div>
           <div className="lg:flex gap-10">
-            {/**component stack */}
-            <div className="bg-slate-100 text-center shadow-xl p-10 rounded-xl my-10  dark:bg-white flex-1">
-              <Image
-                src={design}
-                width={100}
-                height={100}
-                alt="alguma coisa"
-              />
-              <h3 className="text-black dark:text-white text-lg font-medium pt-8 pb-2  ">
-                Frontend
-              </h3>
-              <p className="text-py-2 text-black dark:text-white">
-                Desenvolvimento de interfaces bonitas, funcionais e intuitivas prezando pela beleza do código
-              </p>
-              <h4 className="py-4 text-teal-600 font-extrabold">Ferramentas:</h4>
-              <p className="text-teal-600 py-1">NextJs</p>
-              <p className="text-teal-600 py-1">React</p>
-              <p className="text-teal-600 py-1">Styled Components</p>
-              <p className="text-teal-600 py-1">TailwindCss</p>
-            </div>
+            
+            {/**<StackComponent path={design } /> */}
             <div className="bg-slate-100 text-center shadow-xl p-10 rounded-xl my-10 dark:bg-white flex-1">
               <Image
                 src={code}
