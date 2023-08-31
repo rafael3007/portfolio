@@ -9,14 +9,6 @@ import { ThemeProviders } from './Theme-providers'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
-  title: 'PortFólio - Rafael Brito',
-  description: 'Conheça um pouco sobre mim e sobre o meu trabalho.',
-}
-
-
-
-
 export default function RootLayout({
   children,
 }: {
