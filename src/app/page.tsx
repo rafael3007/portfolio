@@ -91,7 +91,8 @@ export default function Home() {
             </p>
            
           </div>
-          <div className="lg:flex gap-10">     
+          <div className="lg:flex gap-10">
+            {/**Stack Component*/}
             <StackComponent
               area="FrontEnd"
               description="breve descrição"
