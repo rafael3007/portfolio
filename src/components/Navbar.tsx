@@ -8,7 +8,7 @@ export default function Navbar() {
 
     return (
         <nav className="py-10 mb-12 flex justify-between dark:text-white">
-            <h1 className="font-burtons text-xl">Rafael Brito Sampaio</h1>
+            <h1 className="font-burtons text-xl">Rafael Brito</h1>
             <ul className="flex items-center">
               <li>
                 <ThemeSwitch />
