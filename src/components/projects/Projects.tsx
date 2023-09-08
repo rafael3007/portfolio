@@ -8,7 +8,7 @@ interface propsTypes {
 export default function Projects({ title, description, stacks }: propsTypes) {
     var stackList = stacks
     return (
-        <div className="basis-1/3 flex-1 bg-slate-100 shadow-lg rounded-lg dark:bg-black ">
+        <div className="basis-1/3 flex-1 bg-gray-900 shadow-lg rounded-lg dark:bg-white dark:shadow-lg ">
             <div className="basis-1/3 flex-1">
                 <h1 className="text-teal-600 font-extrabold p-2 m-2 text-xl">{title}</h1>
                 <div className="flex  flex-col">
@@ -25,7 +25,7 @@ export default function Projects({ title, description, stacks }: propsTypes) {
                 </div>
                 <div>
                     <h2 className="p-2 text-teal-600 font-extrabold ">Decrição</h2>
-                    <p className="p-2 text-teal-600">{ description }</p>
+                    <p className="p-4 text-gray-900 text-justify">{ description }</p>
                 </div>
             </div> 
         </div>

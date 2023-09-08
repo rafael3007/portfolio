@@ -14,9 +14,9 @@ export default function StackComponent({
 
   return (
     <div className="bg-slate-100 text-center shadow-xl p-10 rounded-xl my-10  dark:bg-white flex-1">
-        {children}
-        <h3 className="text-black dark:text-white text-lg font-medium pt-8 pb-2  ">{area}</h3>
-        <p className="text-py-2 text-black dark:text-white">{description}</p>
+        <div className="flex justify-center items-center">{children}</div>
+        <h3 className="text-teal-600 text-lg font-extrabold pt-8 pb-2  ">{area}</h3>
+        <p className="text-py-2 text-black">{description}</p>
         <h4 className="py-4 text-teal-600 font-extrabold">Ferramentas:</h4>
         {
           toolList.map((item, index) => {

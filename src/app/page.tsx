@@ -18,23 +18,32 @@ import consulting from "../../public/consulting.png";
 import StackComponent from "@/components/stacks/StackComponent";
 import Projects from "@/components/projects/Projects";
 
+
 export default function Home() {
+
+  
+
   const [imageAlternate, setImageAlternate] = useState(false);
   var projectList = [
     {
       "Title": "EcoBot",
-      "description": "descrição lorem asudhaus uahsduiahs uihasiufhasiu hfasuihf iuahsfui hasifhasiu hfiaushf iuashfui ishfiashfuih uisafhiuash fuiahsfui hauisfhas iufhaiusfh aiusfhaiushf uiashfuiash fiuash uiahfu asfao shfuahsfuiahsfiu ahsfiuhasiu hasiufh auisfh aiush fiuashfiuahs iufhaus hfai hasuifh asiufh",
-      "tecnologias": ["Javascript", "NodeJs","API"]
+      "description": "O bot tem como finalidade responder o usuário de acordo com a mensagem enviada, nesse caso a partir de um comando '#' ele é acionado onde pesquisa as informações passadas após o # e devolve a resposta ao usuário. Além disso foi desenvolvido diversas automações e integrações como notificações de relatórios e também mensageria para envio em massa de mensagens para uma quantidade N de números. Para o funcionamento foi utilizada o NodeJs com venom-bot que tem o selenium funcionando 'por trás dos panos' e também em alguns casos os dados são obtidos de planilhas online ou de outros serviços google, para isso então foi utilizada a API do google.",
+      "tecnologias": ["Javascript", "NodeJs","API","WhatsApp integration","Chatbot"]
     },
     {
       "Title": "ECO ERP",
-      "description": "descrição lorem asudhaus uahsduiahs uihasiufhasiu hfasuihf iuahsfui hasifhasiu hfiaushf iuashfui ishfiashfuih uisafhiuash fuiahsfui hauisfhas iufhaiusfh aiusfhaiushf uiashfuiash fiuash uiahfu asfao shfuahsfuiahsfiu ahsfiuhasiu hasiufh auisfh aiush fiuashfiuahs iufhaus hfai hasuifh asiufh",
-      "tecnologias": ["Javascript", "NodeJs","API"]
+      "description":"A ideia inicial do software é ser capaz de gerir as diversas areas de uma empresa desde a parte financeira até a area de RH, priorizando a interface e a simplicidade, além das eficiencia do sistema. O sistema tem um foco especial para EPS's da area eletrica, podendo se adaptar para outras areas. Para isso foi utilizado o NextJs com o TailwindCss. Para a parte de desenvolvimento foi utilizado e configurado o Eslint + Prettier visando a padronização do projeto",
+      "tecnologias": [ "Nextjs", "API","Eslint","Prettier","Typescript","Git"],
     },
     {
       "Title": "Move-it",
-      "description": "descrição lorem asudhaus uahsduiahs uihasiufhasiu hfasuihf iuahsfui hasifhasiu hfiaushf iuashfui ishfiashfuih uisafhiuash fuiahsfui hauisfhas iufhaiusfh aiusfhaiushf uiashfuiash fiuash uiahfu asfao shfuahsfuiahsfiu ahsfiuhasiu hasiufh auisfh aiush fiuashfiuahs iufhaus hfai hasuifh asiufh",
-      "tecnologias": ["Javascript", "NodeJs","API"]
+      "description": "Esse projeto se assemelha a um pomodoro onde a cada X minutos/segundos é notificado uma nova tafera/task e o usuário deve sinalizar se ela foi concluida ou não, caso seja concluida uma XP será adicinado ao usuario podendo assim subir de nivel. O foco do projeto nessa situação foi visando atividade fisica como um 'jogo', entretando é possivel de adapta-lo para diversas situações. Nesse projeto foi utilizado o ReacJs com Styled Components para a estilização além ser publicado na vercel devido a sua praticidade e também sua integração com o github pensando no CI/CD do projeto. ",
+      "tecnologias": ["Javascript", "Git", "CI/CD", "ReactJs","GitHuv","Vercel"]
+    },
+    {
+      "Title": "EcoApp",
+      "description":"Projeto criado com a finalidade de ser um aplicativo para exibição de dados, sejam informações brutas ou graficos em qualquer smartphone, para isso foi escolhido o React Native. A aplicação consome os dados via API do Google onde também é feita a autenticação do usuario. ",
+        "tecnologias": ["Javascript", "Git", "React Native", "API", "GitHuv", "Google API", "Auths","Expo"]
     }
   ];
 
@@ -50,7 +59,7 @@ export default function Home() {
               Developer
             </h3>
             <p className="light:text-white text-md py-5 leading-8 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
-              Desenvolvedor Fullstack com foco em Frontend usando NextJs. Conheça um pouco mais sobre mim, sobre os meus trabalhos e habilidades
+              Desenvolvedor Fullstack com foco em Frontend usando NextJs. Conheça um pouco mais sobre mim, sobre os meus trabalhos, projetos e habilidades
             </p>
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
               <a href="https://github.com/rafael3007" target="_blank" ><AiFillGithub className="text-gray-600 dark:text-black" /></a> 
@@ -59,21 +68,21 @@ export default function Home() {
             </div>
             <div onClick={()=>setImageAlternate(!imageAlternate)} className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
               
-              {imageAlternate ? (
-                <Image
-                src={imageProfile}
-                layout="fill"
-                objectFit="cover"
-                alt="Imagem real"
-                />
-              ) : (
-                <Image
-                src={deved}
-                layout="fill"
-                objectFit="cover"
-                alt="avatar cartoon"
-                />
-              )}
+              <div className="flex justify-center items-center sm:m-0 p-0">
+                {imageAlternate ? (
+                  <Image
+                    src={imageProfile}
+                    layout="fill"
+                    alt="Imagem real"
+                  />
+                ) : (
+                  <Image
+                    src={deved}  
+                    layout="fill"    
+                    alt="avatar cartoon"
+                  />
+                )}
+              </div>
               
             </div>
           </div>
