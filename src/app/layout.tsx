@@ -24,8 +24,8 @@ export default function RootLayout({
       </head>
       <body className={inter.className} >
         <ThemeProviders>
-          <div>
-            <main className="light:bg-white px-10 dark:bg-gray-900 md:px-20 lg:px-40">
+          <div className='min-w-[500px]'>
+            <main className="light:bg-white px-10 dark:bg-gray-900 min-w-[500px]">
                 <Navbar />
               {children}
             </main>

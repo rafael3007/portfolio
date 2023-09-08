@@ -49,7 +49,7 @@ export default function Home() {
 
   return (
     <div>
-      <main className=" light:bg-white px-10 dark:bg-gray-900 md:px-20 lg:px-40">
+      <main className=" light:bg-white px-10 dark:bg-gray-900 min-h-[500px]">
         <section className="min-h-screen">         
           <div className="text-center p-10 py-10">
             <h2 className="text-5xl py-2 text-teal-600 font-medium dark:text-teal-400 md:text-6xl">
@@ -58,7 +58,7 @@ export default function Home() {
             <h3 className="text-2xl py-2 dark:text-white md:text-3xl">
               Developer
             </h3>
-            <p className="light:text-white text-md py-5 leading-8 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
+            <p className="light:text-white text-md py-5 leading-8 dark:text-gray-200 max-w-xl mx-auto text-justify md:text-xl">
               Desenvolvedor Fullstack com foco em Frontend usando NextJs. Conheça um pouco mais sobre mim, sobre os meus trabalhos, projetos e habilidades
             </p>
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
@@ -72,6 +72,7 @@ export default function Home() {
                 {imageAlternate ? (
                   <Image
                     src={imageProfile}
+            
                     layout="fill"
                     alt="Imagem real"
                   />
@@ -90,7 +91,7 @@ export default function Home() {
         <section>
           <div>
             <h3 className="text-3xl py-1 dark:text-white ">O inicio</h3>
-            <p className=" light:text-white text-md py-2 leading-8  dark:text-gray-200">
+            <p className=" light:text-white text-md py-2 leading-8 text-justify dark:text-gray-200">
               Comecei no mercado de Tecnologia em 2021 como <span className="text-teal-500"> estagiário</span>, quando conheci o mundo 
               <span className="text-teal-500"> Dev </span>. Me identifiquei e comecei a estudar programação mobile e desenvolver meus primeiros Apps (ou tentar rs)
               Pouco tempo depois passei a aprender um pouco sobre a web e desvendar os mistérios do,<span className="text-red-500"> HTML</span>, <span className="text-blue-700">Css</span>, <span className="text-yellow-400">Javascript</span>, rotas, requisições...
@@ -143,7 +144,7 @@ export default function Home() {
         <section className="py-10">
           <div>
             <h3 className="text-teal-600 font-extrabold p-2 m-2 text-5xl dark:text-white">Portfolio</h3>
-            <p className="text-white text-md py-2 leading-8 dark:text-gray-200">
+            <p className="text-white text-md py-2 leading-8 text-center dark:text-gray-200">
               Desde 2021 desenvolvo alguns projetos seja para web ou mobile além de colaborar com softwares e projetos empresariais
             </p>
           </div>
