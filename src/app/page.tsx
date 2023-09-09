@@ -144,7 +144,7 @@ export default function Home() {
         <section className="py-10">
           <div>
             <h3 className="text-teal-600 font-extrabold p-2 m-2 text-5xl dark:text-white">Portfolio</h3>
-            <p className="text-white text-md py-2 leading-8 text-center dark:text-gray-200">
+            <p className="text-white text-md py-2 leading-8 dark:text-gray-200">
               Desde 2021 desenvolvo alguns projetos seja para web ou mobile além de colaborar com softwares e projetos empresariais
             </p>
           </div>
